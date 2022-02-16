@@ -15,7 +15,6 @@ model = Lasso()
 model_dict = {"Linear": RegressionAlgorithm(),
               "Lasso": Lasso(),
               "Ridge": Ridge()}
-beta = [0, 0]
 app = Flask(__name__)
 
 
