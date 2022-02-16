@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo plot</title>
+</head>
+<body>
+    <h3>Lasso Regression display of randomly generated 2-dimensional data</h3>
+    <form action="" enctype='multipart/form-data' method='POST'>
+        <i>Regression Type:</i>
+            <select name="type">
+                <option value ="Linear">Linear regression</option>
+                <option value ="Lasso">Lasso</option>
+                <option value="Ridge">Ridge</option>
+            </select>
+
+        <i>CV-folds:</i>
+        <input type="text" class="txt_input" name="K"  style="margin-top:10px;"/>
+        <input type="submit" value="Plot" class="button-new" style="margin-top:10px;"/>
+    </form>
+</body>

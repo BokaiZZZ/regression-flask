@@ -1,0 +1,6 @@
+Flask
+pylint
+black
+numpy
+matplotlib
+sklearn
