@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    html = "<h3>Linear Regression Model Home</h3>"
+    html = "<h3>Welcome to Linear Regression Model Home</h3>"
     return html.format(format)
 
 
