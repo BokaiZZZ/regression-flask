@@ -8,14 +8,8 @@ steps:
   ]
 #step 2
 - name: 'gcr.io/cloud-builders/docker'
-  args: [
-   'build', 
-   '-t', 
-   'us.gcr.io/regression-flask/container-regression',
-   '-t', 
-   'us.gcr.io/regression-flask/container-regression:latest',
-   '.'
-  ]
+  args: ['build','-t','us.gcr.io/regression-flask/container-regression:latest','.']
+
 # step3 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push','us.gcr.io/regression-flask/container-regression:latest']
