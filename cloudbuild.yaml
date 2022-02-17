@@ -17,10 +17,10 @@ steps:
 #step 4
 - name: 'gcr.io/cloud-builders/kubectl'
   args: [
-   'set', 
-   'image', 
-   'deployment/regression-flask',
-   'container-regression=us.gcr.io/regression-flask/container-regression:latest'
+   'rollout', 
+   'restart', 
+   'deployment/regression-flask'
+   #'container-regression=us.gcr.io/regression-flask/container-regression:latest'
   ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
