@@ -22,9 +22,8 @@ steps:
   args: [
    'set', 
    'image', 
-   'deployment', 
-   'regression-flask', 
-   'regression-flask=us.gcr.io/regression-flask/container-regression:latest'
+   'deployment/regression-flask',
+   'container-regression=us.gcr.io/regression-flask/container-regression:latest'
   ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
