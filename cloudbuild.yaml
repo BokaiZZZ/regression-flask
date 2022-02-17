@@ -1,0 +1,37 @@
+steps:
+#step 1
+- name: 'gcr.io/cloud-builders/docker' 
+  entrypoint: 'bash'
+  args: [
+   '-c', 
+   'docker pull us.gcr.io/regression-flask/container-regression || exit 0'
+  ]
+#step 2
+- name: gcr.io/cloud-builders/docker
+  args: [
+   'build', 
+   '-t', 
+   'us.gcr.io/regression-flask/container-regression',
+   '-t', 
+   'us.gcr.io/regression-flask/container-regression:latest',
+   '.'
+  ]
+
+#step 3
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: [
+   'set', 
+   'image', 
+   'deployment', 
+   'regression-flask', 
+   'regression-flask=us.gcr.io/regression-flask/container-regression:latest'
+  ]
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=regression-cluster'
+
+# push images to Google Container Registry with tags
+images: [
+   'us.gcr.io/regression-flask/container-regression',
+   'us.gcr.io/regression-flask/container-regression:latest'
+  ]
