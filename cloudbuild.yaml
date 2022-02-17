@@ -1,13 +1,13 @@
 steps:
 #step 1
-- name: 'pull container' 
+- name: 'gcr.io/cloud-builders/docker' 
   entrypoint: 'bash'
   args: [
    '-c', 
    'docker pull us.gcr.io/regression-flask/container-regression || exit 0'
   ]
 #step 2
-- name: 'build container'
+- name: 'gcr.io/cloud-builders/docker'
   args: [
    'build', 
    '-t', 
@@ -17,11 +17,11 @@ steps:
    '.'
   ]
 # step3 
-- name: 'push container'
+- name: 'gcr.io/cloud-builders/docker'
   args: ['push','us.gcr.io/regression-flask/container-regression:latest']
 
 #step 4
-- name: 'update kubernetes cluster'
+- name: 'gcr.io/cloud-builders/kubectl'
   args: [
    'set', 
    'image', 
