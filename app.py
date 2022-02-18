@@ -54,7 +54,7 @@ def create_figure():
     y_pred = rel.predict(X)
     axis.scatter(X, y, color='black')
     axis.plot(X, y_pred, color='blue')
-    axis.legend(("Fitted Line", "Points"))
+    axis.legend(("Points","Fitted Line"))
     return fig
 
 
