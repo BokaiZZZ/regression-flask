@@ -11,7 +11,7 @@ Go to the [deployed website](http://34.122.55.167:8080/) and you can see the tit
 ### Plot demo 
 Add /show after the home url, the page of regression plot of randomly generated 2-dimensional data will be displayed as figure below. Users can choose the regression type (Linear Regression, Lasso, Ridge) and CV folds. After pressing plot, the user can see a plot of random generated data using the chosed fitting parameters.
 
-![image](https://user-images.githubusercontent.com/97444802/154597994-e6fb32e3-f1e4-4c2b-afa6-2d80c51c8cfb.png)
+![image](https://user-images.githubusercontent.com/97444802/154598058-97fad1c8-87b7-4a06-bbd1-f72d7b2548b4.png)
 
 ### Model build interface
 Apart from the two pages above, adding /build_model after home url is an interface to obtain model coefficeints of the post data X, y and fitting model parameters. The detailed request format can be found in app.py. All input parameters can be found in model.py, which will also be expanded in the following section.    
