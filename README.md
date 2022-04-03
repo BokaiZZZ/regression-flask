@@ -16,6 +16,8 @@ Add /show after the home url, the page of regression plot of randomly generated 
 ### Model build interface
 Apart from the two pages above, adding /build_model after home url is an interface to obtain model coefficeints of the post data X, y and fitting model parameters. The detailed request format can be found in app.py. All input parameters can be found in model.py, which will also be expanded in the following section.    
 
+The demo video can be found on [Youtube](https://youtu.be/hZqvawjnSPY)
+
 ## Function introduction 
 The microservice is mainly to automatically tune blackbox regression models. The inputs are listed below. 
 
